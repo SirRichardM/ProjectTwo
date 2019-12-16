@@ -75,9 +75,10 @@ img {
   display: flex;
   flex-direction: row;
   margin: 20px;
-  padding: 100px;
+  
   align-items: baseline;
   text-align: center;
+  
   
 }
 
@@ -85,4 +86,8 @@ img {
   padding: 20px;
  margin: 0px 20px;
 
+}
+
+p {
+  color: white;
 }
