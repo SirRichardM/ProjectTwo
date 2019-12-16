@@ -2,7 +2,7 @@ import React from "react"
 
 import { Link, Route } from "react-router-dom"
 
-import {getMovies} from "./services/apiCalls"
+import {getMovies} from "./services/ApiCalls"
 
 const Classics = (props) => {
 

@@ -6,6 +6,7 @@ import { Link, Route } from "react-router-dom"
 import Home from "./Home"
 import Classics from "./Classics"
 import Games from "./Games"
+import GetMovies from "./services/ApiCalls"
 
 
 class App extends Component {
@@ -20,20 +21,20 @@ class App extends Component {
   }
 
 
-  componentDidMount = async () => {
-    let result = await axios.get("https://api.rawg.io/api/games?search=doom")
-    console.log(result)
-    console.log(result.data.results)
-    let movie = await axios.get("https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=8f5a5d2d5c46bee563141af24bce82ab&query=the+thing")
-    console.log(movie)
-    console.log(movie.data.results[0].overview)
-    this.setState({
-      movieTitle: movie.data.results[0].title,
-      poster: "",
-      overview: movie.data.results[0].overview
-    })
+  // // componentDidMount = async () => {
+  // //   let result = await axios.get("https://api.rawg.io/api/games?search=doom")
+  // //   console.log(result)
+  // //   console.log(result.data.results)
+  // //   let movie = await axios.get("https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=8f5a5d2d5c46bee563141af24bce82ab&query=the+thing")
+  // //   console.log(movie)
+  // //   console.log(movie.data.results[0].overview)
+  // //   this.setState({
+  // //     movieTitle: movie.data.results[0].title,
+  // //     poster: "",
+  // //     overview: movie.data.results[0].overview
+  // //   })
 
-  }
+  // }
   
   // onClick = (e) => {
   //   e.preventDefault();
@@ -56,7 +57,7 @@ class App extends Component {
 
         
         <div className="container" >
-
+        
 
           <div className="text-block">
        
@@ -67,7 +68,7 @@ class App extends Component {
           </div>
           <main>
             
-
+          <GetMovies />
 
           </main>
         </div>
