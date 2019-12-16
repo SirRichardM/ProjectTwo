@@ -62,7 +62,7 @@ class App extends Component {
           <div className="text-block">
        
             <h2>Horror Classics!</h2>
-            <GetMovies />
+            ?
             
             {/* <img src ="https://image.tmdb.org/t/p/original/tzGY49kseSE9QAKk47uuDGwnSCu.jpg" alt=""/> */}
           </div>

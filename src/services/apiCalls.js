@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios"
+const post = "https://image.tmdb.org/t/p/original"
 
-const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", ]
+const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th"]
 
  
   
@@ -26,7 +27,8 @@ class GetMovies extends Component {
           console.log(movie)
           let movies = {
             movieTitle: movie.data.results[0].title,
-            overview: movie.data.results[0].overview
+            overview: movie.data.results[0].overview,
+             poster: (post + movie.data.results[0].poster_path)
           }
           console.log(movies)
           this.setState({
@@ -44,7 +46,8 @@ class GetMovies extends Component {
       <div>
          {this.state.movie.map((film, index) =>
           <div key={index}>
-            <h1>{film.movieTitle}</h1>
+             <h1>{film.movieTitle}</h1>
+             <img src={film.poster} alt="poster"/>
             <p>{film.overview}</p>
           
           </div>
