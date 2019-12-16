@@ -4,10 +4,10 @@ import axios from "axios";
 
  function Info (props) {
 
- 
+ console.log(props.information)
   return (
     <div>
-      <h1>HELLO MOTO {props.info.movieTitle}</h1>
+      <h1>{props.information.overview}</h1>
     </div>
   )
 }

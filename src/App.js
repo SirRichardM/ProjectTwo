@@ -8,6 +8,10 @@ import Classics from "./Classics"
 import Games from "./Games"
 import GetMovies from "./services/ApiCalls"
 import Info from "./services/Info"
+const post = "https://image.tmdb.org/t/p/original"
+
+const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th"]
+
 
 
 class App extends Component {
@@ -15,9 +19,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      movieTitle: "",
-      poster: "",
-      overview: ""
+      movie: []
     }
   }
 
@@ -44,18 +46,41 @@ class App extends Component {
   //   })
   // }
 
+  componentDidMount() {
+    for (let i = 0; i < theClassics.length; i++)
+      axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=8f5a5d2d5c46bee563141af24bce82ab&query=${theClassics[i]}`)
+        .then(movie => {
+          console.log(movie)
+          let movies = {
+            movieTitle: movie.data.results[0].title,
+            overview: movie.data.results[0].overview,
+            poster: (post + movie.data.results[0].poster_path)
+             
+          }
+          console.log(movies)
+          this.setState({
+            movie: [...this.state.movie, movies],
+            
+          })
+        })
+        
+  }
+
+
+
 
 
   render() {
+    console.log(this.state.movie)
     return (
       <div className="App" >
         <Link to="/home">Home of Horror</Link>
         <Link to="/classics">The Classics</Link>
         <Link to="/games">Classis w. Games</Link>
         <Route path="/home" render={() => <Home />} />
-        <Route path="/classics" render={() => <Classics />} />
+        <Route path="/classics" render={() => <Classics classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        <Route path="/Info" render={() => <Info/>} />
+        {/* <Route path="/Info" render={() => <Info information={this.state.movie}/>} /> */}
     
 
         <div className="container" >
