@@ -45,7 +45,7 @@ h2{
   font-family: 'Bangers', cursive;
   color: white;
   text-shadow: 5px 5px black;
-  font-size: 100px;
+  font-size: 35px;
   text-shadow: 10px 10px #03F869;
   margin: 0;
 }
@@ -60,5 +60,29 @@ h2:hover {
   text-shadow: 10px -1000px 1000px #03F869;
   transition-duration: 30s;
   color: #F8E803;
+
+}
+
+img {
+  width: 350px;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 10px 0px;
+
+}
+
+.classics {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  padding: 100px;
+  align-items: baseline;
+  text-align: center;
+  
+}
+
+.spaces {
+  padding: 20px;
+ margin: 0px 20px;
 
 }

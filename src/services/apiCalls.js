@@ -44,15 +44,19 @@ class GetMovies extends Component {
     
     return (
       <div>
+        <div className="classics">
          {this.state.movie.map((film, index) =>
-          <div key={index}>
-             <h1>{film.movieTitle}</h1>
+           <div key={index}>
+             <div className="spaces">
+             <h2>{film.movieTitle}</h2>
              <img src={film.poster} alt="poster"/>
-            <p>{film.overview}</p>
-          
+               <p>{film.overview}</p>
+               </div>
+             
           </div>
+          
           )} 
-        
+        </div>
     </div>
   )
 }
