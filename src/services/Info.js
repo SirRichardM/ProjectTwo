@@ -5,10 +5,12 @@ import axios from "axios";
 
  function Info (props) {
 
- console.log(props.information)
+ console.log(props.match.params.id)
   return (
     <div>
-      <h1>{props.information.overview}</h1>
+
+      
+      
     </div>
   )
 }

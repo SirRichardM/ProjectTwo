@@ -19,7 +19,7 @@ const Classics = (props) => {
              <h2>{film.movieTitle}</h2>
               <Link to={`/Info/${film.id}` }><img src={film.poster} alt="poster"/> </Link>
               <p>{film.overview}</p>
-              <Route path="/Info" render={() => <Info information={props.classi}/>} />
+              {/* <Route path="/Info" render={() => <Info info={film.id}/>} /> */}
               </div>
            {/* <Route path="/Info" render={() => <Info info={this.state.movie}/>} /> */}
         </div>

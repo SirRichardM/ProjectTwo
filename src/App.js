@@ -19,7 +19,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      movie: []
+      movie: [],
+      extra: false
     }
   }
 
@@ -79,10 +80,10 @@ class App extends Component {
         <Link to="/classics">The Classics</Link>
         <Link to="/games">Classis w. Games</Link>
         <Route path="/home" render={() => <Home />} />
-        <Route path="/classics" render={() => <Classics classi={this.state.movie} />} />
+        <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        <Route path="/Info/" render={() => <Info information={this.state.movie}/>} />
-    
+        
+      <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie}/>} />
 
         <div className="container" >
 
