@@ -10,7 +10,7 @@ import GetMovies from "./services/ApiCalls"
 import Info from "./services/Info"
 const post = "https://image.tmdb.org/t/p/original"
 
-const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th"]
+const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead"]
 
 
 
@@ -54,7 +54,8 @@ class App extends Component {
           let movies = {
             movieTitle: movie.data.results[0].title,
             overview: movie.data.results[0].overview,
-            poster: (post + movie.data.results[0].poster_path)
+            poster: (post + movie.data.results[0].poster_path),
+            id: movie.data.results[0].id
              
           }
           console.log(movies)
@@ -66,7 +67,7 @@ class App extends Component {
         
   }
 
-
+  
 
 
 
@@ -80,7 +81,7 @@ class App extends Component {
         <Route path="/home" render={() => <Home />} />
         <Route path="/classics" render={() => <Classics classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        {/* <Route path="/Info" render={() => <Info information={this.state.movie}/>} /> */}
+        <Route path="/Info/" render={() => <Info information={this.state.movie}/>} />
     
 
         <div className="container" >
