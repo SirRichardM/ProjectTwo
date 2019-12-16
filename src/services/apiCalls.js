@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios"
+import { Link, Route } from "react-router-dom"
+import Info from "./Info"
 const post = "https://image.tmdb.org/t/p/original"
+
+
 
 const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th"]
 
@@ -49,10 +53,11 @@ class GetMovies extends Component {
            <div key={index}>
              <div className="spaces">
              <h2>{film.movieTitle}</h2>
-             <img src={film.poster} alt="poster"/>
+               <Link to="/Info" ><img src={film.poster} alt="poster"/> </Link>
                <p>{film.overview}</p>
+
                </div>
-             
+             <Route path="/Info" render={() => <Info info={this.state.movie}/>} />
           </div>
           
           )} 

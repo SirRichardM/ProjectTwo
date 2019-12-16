@@ -7,6 +7,7 @@ import Home from "./Home"
 import Classics from "./Classics"
 import Games from "./Games"
 import GetMovies from "./services/ApiCalls"
+import Info from "./services/Info"
 
 
 class App extends Component {
@@ -35,7 +36,7 @@ class App extends Component {
   // //   })
 
   // }
-  
+
   // onClick = (e) => {
   //   e.preventDefault();
   //   this.setState({
@@ -51,29 +52,28 @@ class App extends Component {
         <Link to="/home">Home of Horror</Link>
         <Link to="/classics">The Classics</Link>
         <Link to="/games">Classis w. Games</Link>
-        < Route path="/home" render={() => <Home />} />
+        <Route path="/home" render={() => <Home />} />
         <Route path="/classics" render={() => <Classics />} />
-        <Route path="/games" render={() => <Games/>} />
+        <Route path="/games" render={() => <Games />} />
+        <Route path="/Info" render={() => <Info/>} />
+    
 
-        
         <div className="container" >
-        
+
 
           <div className="text-block">
-       
+
             <h2>Horror Classics!</h2>
             ?
-            
+
             {/* <img src ="https://image.tmdb.org/t/p/original/tzGY49kseSE9QAKk47uuDGwnSCu.jpg" alt=""/> */}
           </div>
           <main>
-            
-        
+
+
 
           </main>
         </div>
-        <h2>{this.state.movieTitle}</h2>
-        <h2>{this.state.overview}</h2>
       </div>
     );
   }

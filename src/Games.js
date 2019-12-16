@@ -39,12 +39,12 @@ class Games extends Component {
   render() {
     return (
       <div>
-        <div className="classics">
+        <div className="classics"  >
         {this.state.games.map((game, index) =>
           <div key={index}>
             <div className="spaces">
             <h2>{game.title}</h2>
-              <img src={game.screenshot} />
+              <img src={game.screenshot} /> 
               </div>
           </div>
           )}
