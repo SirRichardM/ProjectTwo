@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios"
 
-const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead"]
+const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", ]
 
  
   
@@ -11,10 +11,9 @@ class GetMovies extends Component {
     super(props)
 
     this.state = {
-      movie: [],
-      movieTitle: "",
-      poster: "",
-      overview: ""
+      movie: []
+       
+      
     }
   }
     
@@ -25,29 +24,32 @@ class GetMovies extends Component {
       axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=8f5a5d2d5c46bee563141af24bce82ab&query=${theClassics[i]}`)
         .then(movie => {
           console.log(movie)
-          let movies = movie.data
+          let movies = {
+            movieTitle: movie.data.results[0].title,
+            overview: movie.data.results[0].overview
+          }
           console.log(movies)
           this.setState({
             movie: [...this.state.movie, movies],
-            movieTitle: movies.results[0].title,
-            poster: "",
-            overview: movies.results[0].overview
+            
           })
         })
         
   }
 
-    render() {
-      console.log(this.state.movie)
+  render() {
+    console.log(this.state.movie)
+    
     return (
       <div>
-         {this.state.movie.map((movies, index) =>
+         {this.state.movie.map((film, index) =>
           <div key={index}>
-            <h1>{movies.movieTitle}</h1>
-            <p>{movies.overview}</p>
+            <h1>{film.movieTitle}</h1>
+            <p>{film.overview}</p>
           
           </div>
           )} 
+        
     </div>
   )
 }
