@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+let pic = "https://image.tmdb.org/t/p/original"
 
 
 console.log("hello")
@@ -27,7 +28,7 @@ class Info extends Component {
             release: details.data.release_date,
             tagline: details.data.tagline,
             runtime: details.data.runtime, 
-            backdrop: details.data.backdrop_path,
+            backdrop: (pic + details.data.backdrop_path),
             budget: details.data.budget,
             
 
@@ -54,6 +55,7 @@ class Info extends Component {
         <h1>{this.state.movie.title}</h1>
         <h2>{this.state.movie.release}</h2>
         <h2>{this.state.movie.tagline}</h2>
+        <img src={this.state.movie.backdrop} />
         <p>{this.state.movie.overview}</p>
         <h2>Runtime:{this.state.movie.runtime}Mins</h2>
         <h2>Budget: $ {this.state.movie.budget}</h2>
