@@ -90,7 +90,7 @@ class Info extends Component {
         {this.state.movie.apiData === true ?
           <div className="stats">
             <h1>{this.state.movie.title}</h1>
-            <h2>Released on: {this.state.movie.release}</h2>
+            
             <br />
             <h2> " {this.state.movie.tagline} "</h2>
             <br />
@@ -99,15 +99,15 @@ class Info extends Component {
             {/* <img src={this.state.movie.backdrop} /> */}
 
             <h2>Runtime: {this.state.movie.runtime} Mins</h2>
+            <h2>Released on: {this.state.movie.release}</h2>
             <h2>Budget: $ {this.state.movie.budget}</h2>
           </div>
           : <h1>Loading..</h1>}
-        <div>
+        <div className="stills">
           {this.state.additionalPics.map((pics, i) =>
-            <div key={i}>
+            <div key={i} >
+              <div >
               <img src={pic + pics} />
-              <div>
-                {pics}
               </div>
             </div>
           )}

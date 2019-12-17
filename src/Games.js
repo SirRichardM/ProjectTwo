@@ -53,12 +53,12 @@ class Games extends Component {
           <div key={index}>
             <div className="spaces">
             <h2>{game.title}</h2>
-              <Link to={`/gameinfo/${game.id}`}><img src={game.screenshot} /> </Link>
+              <Link to={`/gameinfo/${game.id}`} id={game.id}><img src={game.screenshot} /> </Link>
               </div>
           </div>
           )}
           </div>
-        <Route path="/gameinfo" render={() => <GameInfo />} />
+        {/* <Route path="/gameinfo" render={() => <GameInfo />} /> */}
       </div>
     )
   }

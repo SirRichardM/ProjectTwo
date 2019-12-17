@@ -105,3 +105,12 @@ embed {
   border: 2px solid white;
   border-radius: 10px;
 }
+
+.stills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+}

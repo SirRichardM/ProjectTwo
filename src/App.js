@@ -10,6 +10,7 @@ import GetMovies from "./services/ApiCalls"
 import Info from "./services/Info"
 import GameInfo from "./gameinfo"
 import Header from "./Header"
+import Footer from "./services/Footer"
 const post = "https://image.tmdb.org/t/p/original"
 
 
@@ -23,7 +24,8 @@ class App extends Component {
 
     this.state = {
       movie: [],
-      extra: false
+      extra: false,
+      
     }
   }
 
@@ -67,7 +69,7 @@ class App extends Component {
         <Route path="/home" render={() => <Home />} />
         <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        <Route path="/gameinfo" render={(props) => <GameInfo {...props} />} />
+        <Route path="/gameinfo/:id" render={(props) => <GameInfo {...props}  />} />
       <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie}/>} />
 
         <div className="container" >
@@ -86,6 +88,7 @@ class App extends Component {
 
           </main>
         </div>
+        <Footer/>
       </div>
     );
   }
