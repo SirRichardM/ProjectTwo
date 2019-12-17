@@ -8,11 +8,12 @@ import Classics from "./Classics"
 import Games from "./Games"
 import GetMovies from "./services/ApiCalls"
 import Info from "./services/Info"
-import GameInfo  from "./gameinfo"
+import GameInfo from "./gameinfo"
+import Header from "./Header"
 const post = "https://image.tmdb.org/t/p/original"
 
 
-const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser"]
+const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser", "event horizon"]
 
 
 
@@ -27,27 +28,7 @@ class App extends Component {
   }
 
 
-  // // componentDidMount = async () => {
-  // //   let result = await axios.get("https://api.rawg.io/api/games?search=doom")
-  // //   console.log(result)
-  // //   console.log(result.data.results)
-  // //   let movie = await axios.get("https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=8f5a5d2d5c46bee563141af24bce82ab&query=the+thing")
-  // //   console.log(movie)
-  // //   console.log(movie.data.results[0].overview)
-  // //   this.setState({
-  // //     movieTitle: movie.data.results[0].title,
-  // //     poster: "",
-  // //     overview: movie.data.results[0].overview
-  // //   })
-
-  // }
-
-  // onClick = (e) => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     movieTitle: movie.data.results[0].title
-  //   })
-  // }
+  
 
   componentDidMount() {
     for (let i = 0; i < theClassics.length; i++)
@@ -78,13 +59,15 @@ class App extends Component {
     
     return (
       <div className="App" >
+        <Header />
+
         <Link to="/home">Home of Horror</Link>
         <Link to="/classics">The Classics</Link>
         <Link to="/games">Classis w. Games</Link>
         <Route path="/home" render={() => <Home />} />
         <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        <Route path="/gameinfo" render={() => <GameInfo />} />
+        <Route path="/gameinfo" render={(props) => <GameInfo {...props} />} />
       <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie}/>} />
 
         <div className="container" >

@@ -49,18 +49,7 @@ class Info extends Component {
 
           })
 
-        // axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.state.movie.title}&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=1`)
-        //   .then(gif => {
-        //     this.setState({
-        //       movie: {
-        //         gifs: gif.data.data[0].embed_url,
-        //         apiData: true
-        //       }
-
-        //   })
-
-
-        //   })
+       
 
         axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/movie/${idFor}/images?api_key=8f5a5d2d5c46bee563141af24bce82ab`)
           .then(image => {

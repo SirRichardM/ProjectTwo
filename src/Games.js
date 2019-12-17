@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import { render } from "@testing-library/react"
 import axios from "axios"
 import { Link, Route } from "react-router-dom"
+import GameInfo from "./gameinfo"
 
 const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "total recall", "saw", "texas chainsaw massacre" ]
 
@@ -43,7 +44,7 @@ class Games extends Component {
 
 
   render() {
-    console.log(this.state.games)
+  
     return (
       <div>
         <h1>Movies turned Games</h1>
@@ -52,12 +53,12 @@ class Games extends Component {
           <div key={index}>
             <div className="spaces">
             <h2>{game.title}</h2>
-             <Link path="/gameinfo"><img src={game.screenshot} /> </Link>
+              <Link to={`/gameinfo/${game.id}`}><img src={game.screenshot} /> </Link>
               </div>
           </div>
           )}
           </div>
-        
+        <Route path="/gameinfo" render={() => <GameInfo />} />
       </div>
     )
   }
