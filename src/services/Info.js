@@ -66,14 +66,17 @@ class Info extends Component {
           .then(image => {
             console.log(image.data.backdrops[0].file_path)
             const newPics = [];
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < image.data.backdrops.length; i++) {
               newPics.push(image.data.backdrops[i].file_path)
 
 
             }
+            
             this.setState({
               additionalPics: [...newPics]
             })
+            
+
             console.log(this.state.additionalPics)
           })
 
@@ -92,6 +95,7 @@ class Info extends Component {
     console.log(this.state.movie.apiData)
     console.log(this.state.movie.gifs)
     console.log(this.state.additionalPics)
+    
     return (
       <div>
         {this.state.movie.apiData === true ?
@@ -103,7 +107,7 @@ class Info extends Component {
             <br />
             <embed src={this.state.movie.gifs} />
             <p>{this.state.movie.overview}</p>
-            <img src={this.state.movie.backdrop} />
+            {/* <img src={this.state.movie.backdrop} /> */}
 
             <h2>Runtime: {this.state.movie.runtime} Mins</h2>
             <h2>Budget: $ {this.state.movie.budget}</h2>
