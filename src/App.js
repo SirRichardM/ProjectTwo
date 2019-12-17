@@ -8,9 +8,11 @@ import Classics from "./Classics"
 import Games from "./Games"
 import GetMovies from "./services/ApiCalls"
 import Info from "./services/Info"
+import GameInfo  from "./gameinfo"
 const post = "https://image.tmdb.org/t/p/original"
 
-const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash"]
+
+const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser"]
 
 
 
@@ -82,7 +84,7 @@ class App extends Component {
         <Route path="/home" render={() => <Home />} />
         <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        
+        <Route path="/gameinfo" render={() => <GameInfo />} />
       <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie}/>} />
 
         <div className="container" >

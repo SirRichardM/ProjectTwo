@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import { render } from "@testing-library/react"
 import axios from "axios"
+import { Link, Route } from "react-router-dom"
 
 const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "total recall", "saw", "texas chainsaw massacre" ]
 
@@ -23,13 +24,18 @@ class Games extends Component {
        console.log(game.data.results[0].short_screenshots[0].image)
        let gameRes = {
          title: game.data.results[0].name,
-         screenshot: game.data.results[0].short_screenshots[0].image
+         screenshot: game.data.results[0].short_screenshots[0].image,
+         id : game.data.results[0].id
 
        }
        this.setState({
         games : [...this.state.games, gameRes]
       })
 
+     })
+    axios.get(`https://api.rawg.io/api/games/${this.state.games.id}`)
+      .then(gameDeets => {
+      console.log(gameDeets)
     })
   }
 
@@ -37,6 +43,7 @@ class Games extends Component {
 
 
   render() {
+    console.log(this.state.games)
     return (
       <div>
         <h1>Movies turned Games</h1>
@@ -45,7 +52,7 @@ class Games extends Component {
           <div key={index}>
             <div className="spaces">
             <h2>{game.title}</h2>
-              <img src={game.screenshot} /> 
+             <Link path="/gameinfo"><img src={game.screenshot} /> </Link>
               </div>
           </div>
           )}
