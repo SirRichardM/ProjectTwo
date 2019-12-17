@@ -51,7 +51,7 @@ class App extends Component {
     for (let i = 0; i < theClassics.length; i++)
       axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=8f5a5d2d5c46bee563141af24bce82ab&query=${theClassics[i]}`)
         .then(movie => {
-          console.log(movie)
+          
           let movies = {
             movieTitle: movie.data.results[0].title,
             overview: movie.data.results[0].overview,
@@ -59,7 +59,7 @@ class App extends Component {
             id: movie.data.results[0].id
              
           }
-          console.log(movies)
+          
           this.setState({
             movie: [...this.state.movie, movies],
             
@@ -73,7 +73,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.movie)
+    
     return (
       <div className="App" >
         <Link to="/home">Home of Horror</Link>
