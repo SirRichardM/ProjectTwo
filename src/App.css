@@ -43,7 +43,7 @@ h1{
 }
 
 h2{
-  font-family: 'Bangers', cursive;
+  font-family: 'Creepster', cursive;
   color: white;
   text-shadow: 5px 5px black;
   font-size: 35px;
@@ -99,4 +99,9 @@ p {
   
   margin: 20px 300px;
   
+}
+
+embed {
+  border: 2px solid white;
+  border-radius: 10px;
 }

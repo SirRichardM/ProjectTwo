@@ -14,7 +14,8 @@ class Info extends Component {
     this.state = {
       movie: [],
       apiData: false,
-      apiDataTwo: false
+      apiDataTwo: false, 
+      additionalPics: []
     }
 
   }
@@ -61,9 +62,19 @@ class Info extends Component {
           
         //   })
 
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/movie/${idFor}/similar?api_key=8f5a5d2d5c46bee563141af24bce82ab`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/movie/${idFor}/images?api_key=8f5a5d2d5c46bee563141af24bce82ab`)
           .then(image => {
-          console.log(image)
+            console.log(image.data.backdrops[0].file_path)
+            const newPics = [];
+            for (let i = 0; i < 10; i++) {
+              newPics.push(image.data.backdrops[i].file_path)
+            
+              
+            }
+            this.setState({
+              additionalPics: [...this.state.additionalPics, newPics]
+            })
+            console.log(this.state.additionalPics)
         })
       
     })
@@ -90,8 +101,9 @@ class Info extends Component {
             <h2> " {this.state.movie.tagline} "</h2>
             <br />
             <embed src={this.state.movie.gifs} />
-            <img src={this.state.movie.backdrop} />
             <p>{this.state.movie.overview}</p>
+            <img src={this.state.movie.backdrop} />
+            
             <h2>Runtime: {this.state.movie.runtime} Mins</h2>
             <h2>Budget: $ {this.state.movie.budget}</h2>
           </div>

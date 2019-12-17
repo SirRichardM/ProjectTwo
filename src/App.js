@@ -10,7 +10,7 @@ import GetMovies from "./services/ApiCalls"
 import Info from "./services/Info"
 const post = "https://image.tmdb.org/t/p/original"
 
-const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff"]
+const theClassics = ["the thing","nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow"]
 
 
 
