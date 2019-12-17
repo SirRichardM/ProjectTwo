@@ -96,7 +96,7 @@ p {
 
 .stats {
   align-items: center;
-  background: white;
-  width: 50vw;
+  
+  margin: 20px 300px;
   
 }

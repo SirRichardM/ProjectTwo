@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import { render } from "@testing-library/react"
 import axios from "axios"
 
-const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "total recall", "saw",  ]
+const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "total recall", "saw", "texas chainsaw massacre" ]
 
 
 
