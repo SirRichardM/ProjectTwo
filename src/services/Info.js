@@ -52,6 +52,7 @@ class Info extends Component {
     console.log(this.state.movie)
     return (
       <div>
+        <div className="stats">
         <h1>{this.state.movie.title}</h1>
         <h2>{this.state.movie.release}</h2>
         <h2>{this.state.movie.tagline}</h2>
@@ -59,7 +60,7 @@ class Info extends Component {
         <p>{this.state.movie.overview}</p>
         <h2>Runtime:{this.state.movie.runtime}Mins</h2>
         <h2>Budget: $ {this.state.movie.budget}</h2>
-      
+          </div>
       
       </div>
     );

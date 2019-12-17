@@ -18,7 +18,7 @@ const Classics = (props) => {
             <div className="spaces">
              <h2>{film.movieTitle}</h2>
               <Link to={`/Info/${film.id}` }><img src={film.poster} alt="poster"/> </Link>
-              <p>{film.overview}</p>
+              {/* <p>{film.overview}</p> */}
               {/* <Route path="/Info" render={() => <Info info={film.id}/>} /> */}
               </div>
            {/* <Route path="/Info" render={() => <Info info={this.state.movie}/>} /> */}

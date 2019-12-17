@@ -39,6 +39,7 @@ class Games extends Component {
   render() {
     return (
       <div>
+        <h1>Movies turned Games</h1>
         <div className="classics"  >
         {this.state.games.map((game, index) =>
           <div key={index}>
@@ -49,7 +50,7 @@ class Games extends Component {
           </div>
           )}
           </div>
-        <h1>Movies turned Games</h1>
+        
       </div>
     )
   }

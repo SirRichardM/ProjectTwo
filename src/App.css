@@ -1,5 +1,6 @@
 body {
  background-color: black;
+ text-align: center;
 }
 
 
@@ -75,9 +76,10 @@ img {
   display: flex;
   flex-direction: row;
   margin: 20px;
-  
+  flex-wrap: wrap;
   align-items: baseline;
   text-align: center;
+  justify-content: center;
   
   
 }
@@ -90,4 +92,11 @@ img {
 
 p {
   color: white;
+}
+
+.stats {
+  align-items: center;
+  background: white;
+  width: 50vw;
+  
 }
