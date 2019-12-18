@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import { Link, Route } from "react-router-dom"
 import axios from "axios"
-let platforms = []
-let developers = []
-let screens = []
+
 
 
 
@@ -21,6 +19,9 @@ class GameInfo extends Component {
 
   componentDidMount() {
 
+    let platforms = []
+    let developers = []
+    let screens = []
     axios.get(`https://api.rawg.io/api/games/${this.props.match.params.id}`)
       .then(gameDeets => {
         console.log(gameDeets)
@@ -31,7 +32,7 @@ class GameInfo extends Component {
         }
         for (let j = 0; j < gameDeets.data.developers.length; j++) {
           developers.push(gameDeets.data.developers[j].name)
-          
+
         }
         axios.get(`https://api.rawg.io/api/games/${this.props.match.params.id}/screenshots`)
           .then(gameScreen => {
@@ -41,6 +42,8 @@ class GameInfo extends Component {
             }
 
             console.log(platforms)
+
+          }).then(() => {
             this.setState({
               title: gameDeets.data.name,
               description: gameDeets.data.description_raw,
@@ -74,16 +77,16 @@ class GameInfo extends Component {
             </div>
           ) : <h1>Loading..</h1>
         }
-
+          <div className="shotbox">
         {this.state.apiData === true ?
           this.state.screens.map((image, index) =>
-            <div className="shotbox">
+            
               <div key={index}>
                 <img className="shots" src={image} alt="hooray" />
               </div>
-            </div>)
+          )
           : <h1>Loading...</h1>}
-
+              </div>
         <h2>Made for the</h2>
 
         {this.state.apiData === true ?
