@@ -34,10 +34,10 @@ body {
 } 
 
 h1{
-  font-family: 'Bangers', cursive;
+  font-family: 'Nosifer', cursive;
   color: white;
   font-size: 100px;
-  text-shadow: 5px 5px #03F869;
+  text-shadow: 5px 20px red;
   
   
 }
@@ -127,4 +127,16 @@ embed {
   justify-content: center;
   
   
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: white;
+}
+
+.tar {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7EsaALYmd9cXx7ySzKxGfkBa2Oict-7UP6vLiaccomEHMAdwJCw&s");
+  background-size: contain;
 }

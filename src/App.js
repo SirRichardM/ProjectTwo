@@ -11,10 +11,11 @@ import Info from "./services/Info"
 import GameInfo from "./gameinfo"
 import Header from "./Header"
 import Footer from "./services/Footer"
+import HorrorGames from "./HorrorGames"
 const post = "https://image.tmdb.org/t/p/original"
 
 
-const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser", "event horizon", "the shining", "halloween", "jaws", "the fly", "reanimator", "invasion of the body snatchers", "the texas chain saw massacre 1", "pet sematary", "rosemary's baby", "scream", "child's play", "children of the corn" ]
+const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser", "event horizon", "the shining", "halloween", "jaws", "the fly", "reanimator", "invasion of the body snatchers", "the texas chain saw massacre 1", "pet sematary", "rosemary's baby", "scream", "child's play", "children of the corn", "toxic avenger", "cannibal holocaust" ]
 
 
 
@@ -62,14 +63,15 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
-
-        <Link to="/home">Home of Horror</Link>
+        <Link to="/HorrorGames">Horror Games</Link>
+        {/* <Link to="/home">Home of Horror</Link>
         <Link to="/classics">The Classics</Link>
-        <Link to="/games">Classis w. Games</Link>
+        <Link to="/games">Classis w. Games</Link> */}
         <Route path="/home" render={() => <Home />} />
         <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
         <Route path="/games" render={() => <Games />} />
-        <Route path="/gameinfo/:id" render={(props) => <GameInfo {...props}  />} />
+        <Route path="/gameinfo/:id" render={(props) => <GameInfo {...props} />} />
+        <Route path="/HorrorGames" render={() => <HorrorGames />} />
       <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie}/>} />
 
         <div className="container" >

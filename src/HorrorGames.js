@@ -1,14 +1,13 @@
 import React, {Component} from "react"
-import { render } from "@testing-library/react"
 import axios from "axios"
 import { Link, Route } from "react-router-dom"
-import GameInfo from "./gameinfo"
-
-const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "saw", "texas chainsaw massacre", "doom", "resident evil 1", "resident evil 2", "friday the 13th 2018", "evil dead regeneration", "the evil dead", "evil dead hail to the king", "silent hill 1", "doom 2", "the ring terror", "land of the dead fiddler", "saw 2", "jaws unleashed" ]
 
 
 
-class Games extends Component {
+const games = ["outlast", "system shock", "system shock 2", "outlast 2", "until dawn", "evil within", "amnesia dark", "alan wake", "condemned", "agony", "left 4 dead", "dead space", "dead space 2", "fear", "bloodborne", "layers of fear"]
+
+
+class HorrorGames extends Component {
   constructor(props) {
     super(props)
 
@@ -64,4 +63,4 @@ class Games extends Component {
   }
 }
 
-export default Games;
+export default HorrorGames;
