@@ -114,3 +114,17 @@ embed {
   
   
 }
+
+.shots:hover {
+  transform: scale(2.5);
+  transition-duration: 1s;
+}
+
+.shotbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+}

@@ -4,7 +4,7 @@ import axios from "axios"
 import { Link, Route } from "react-router-dom"
 import GameInfo from "./gameinfo"
 
-const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "total recall", "saw", "texas chainsaw massacre" ]
+const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "total recall", "saw", "texas chainsaw massacre", "doom" ]
 
 
 
