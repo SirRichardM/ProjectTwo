@@ -14,7 +14,7 @@ import Footer from "./services/Footer"
 const post = "https://image.tmdb.org/t/p/original"
 
 
-const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser", "event horizon"]
+const theClassics = ["the thing", "nightmare on elm street", "alien", "night of the living dead", "the exorcist", "friday the 13th", "evil dead II", "braindead", "the return of the living dead", "bad taste", "the stuff", "creepshow", "street trash", "from beyond", "hellraiser", "event horizon", "the shining", "halloween", "jaws", "the fly", "reanimator", "invasion of the body snatchers", "the texas chain saw massacre 1", "pet sematary", "rosemary's baby", "scream", "child's play", "children of the corn" ]
 
 
 
@@ -78,7 +78,7 @@ class App extends Component {
           <div className="text-block">
 
             <h2>Horror Classics!</h2>
-            ?
+          
 
             
           </div>
