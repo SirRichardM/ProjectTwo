@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 let pic = "https://image.tmdb.org/t/p/original"
 const additionalPics = []
-
+const you = "https://www.youtube.com/embed/"
 
 console.log("hello")
 
@@ -32,6 +32,8 @@ class Info extends Component {
         axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.state.movie.title}&api_key=VC8tFxRJWVzQj5LrvDTYc0YsEgUm4EhH&limit=3`)
           .then(gif => {
 
+
+
             this.setState({
               movie: {
                 title: details.data.original_title,
@@ -60,6 +62,14 @@ class Info extends Component {
 
 
             }
+            axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/movie/${idFor}/videos?api_key=8f5a5d2d5c46bee563141af24bce82ab`)
+              .then(video => {
+                console.log(video.data.results[0].key)
+                this.setState({
+                  key: video.data.results[0].key
+                })
+            })
+
             
             this.setState({
               additionalPics: [...newPics]
@@ -103,6 +113,7 @@ class Info extends Component {
             <h2>Budget: $ {this.state.movie.budget}</h2>
           </div>
           : <h1>Loading..</h1>}
+            <embed src={you + this.state.key} />
         <div className="stills">
           {this.state.additionalPics.map((pics, i) =>
             <div key={i} >
