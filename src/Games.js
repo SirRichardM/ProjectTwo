@@ -4,7 +4,7 @@ import axios from "axios"
 import { Link, Route } from "react-router-dom"
 import GameInfo from "./gameinfo"
 
-const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "saw", "texas chainsaw massacre", "doom", "resident evil 1", "resident evil 2", "friday the 13th 2018", "evil dead regeneration", "the evil dead", "evil dead hail to the king", "silent hill 1", "doom 2", "the ring terror", "land of the dead fiddler", "saw 2", "jaws unleashed" ]
+const games = ["alien isolation", "the thing","friday the 13th", "alone in the dark 1",  "gremlins", "predator", "alien vs predator", "jaws", "saw", "texas chainsaw massacre", "doom", "resident evil 1", "resident evil 2", "friday the 13th 2018", "evil dead regeneration", "the evil dead", "evil dead hail to the king", "silent hill 1", "doom 2", "the ring terror", "land of the dead fiddler", "saw 2", "jaws unleashed", "alien resurrection" ]
 
 
 
@@ -47,13 +47,15 @@ class Games extends Component {
   
     return (
       <div>
-        <h1>Movies turned Games</h1>
+        <h1 className="brutal">From Cinema to Game and Vice Versa</h1>
         <div className="classics"  >
         {this.state.games.map((game, index) =>
           <div key={index}>
             <div className="spaces">
-            <h2>{game.title}</h2>
-              <Link to={`/gameinfo/${game.id}`} id={game.id}><img src={game.screenshot} /> </Link>
+              <h2>{game.title}</h2>
+              <div className="srcsht">
+                <Link to={`/gameinfo/${game.id}`} id={game.id}><img  src={game.screenshot} /> </Link>
+                </div>
               </div>
           </div>
           )}

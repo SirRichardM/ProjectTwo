@@ -7,7 +7,8 @@ function Header() {
       <h1 className="tar">Chamber of Chills</h1>
       <div className="header">
      <h2> <Link to="/classics">The Classics</Link> </h2>
-      <h2>  <Link to="/games">Classis w. Games</Link> </h2>
+        <h2>  <Link to="/games">Movies with Games</Link> </h2>
+        <h2><Link to="/HorrorGames">Horror Games</Link></h2>
       </div>
     </div>
   )

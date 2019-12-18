@@ -94,6 +94,7 @@ class Info extends Component {
     console.log(this.state.movie.apiData)
     console.log(this.state.movie.gifs)
     console.log(this.state.additionalPics)
+    console.log(you + this.state.key)
     
     return (
       <div>
@@ -113,7 +114,7 @@ class Info extends Component {
             <h2>Budget: $ {this.state.movie.budget}</h2>
           </div>
           : <h1>Loading..</h1>}
-            <embed src={you + this.state.key} />
+            <iframe src={you + this.state.key} />
         <div className="stills">
           {this.state.additionalPics.map((pics, i) =>
             <div key={i} >
