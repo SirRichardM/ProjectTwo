@@ -12,6 +12,7 @@ const Classics = (props) => {
   return (
     <div>
       <div>
+        <h1 className="tarman" >The Best of the Best</h1>
        <div className="classics">
         {props.classi.map((film, index) =>
            <div key={index}>

@@ -2,8 +2,8 @@ import React from "react"
 
 function Footer() {
   return (
-    <div>
-      <h1>Hello Moto</h1>
+    <div className="footer">
+      <h2>Created by Richard Moebus. Data provided by RAWG API and themoviedb.org.</h2>
     </div>
   )
 }

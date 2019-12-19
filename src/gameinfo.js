@@ -12,7 +12,8 @@ class GameInfo extends Component {
     this.state = {
       description: "",
       platforms: [],
-      apiData: false
+      apiData: false,
+      counter: 0
     }
 
   }
@@ -54,10 +55,24 @@ class GameInfo extends Component {
               apiData: true
             })
           })
-
+        
       }
       )
   }
+
+  onClick = (e) => {
+    e.preventDefault();
+    this.gameVote();
+  }
+
+  gameVote = (e) => {
+    
+    this.setState({
+      counter: this.state.counter += 1
+    })
+}
+
+
 
 
   render() {
@@ -66,6 +81,8 @@ class GameInfo extends Component {
     return (
       <div>
         <h1>{this.state.title}</h1>
+        <h1>{this.state.counter}</h1>
+        <button onClick={(e) => {this.gameVote()}} >Worth playing?</button>
         <h2>Released Date : {this.state.release}</h2>
         <p>{this.state.description}</p>
         <p>Developed by :</p>

@@ -70,6 +70,7 @@ img {
   border: 3px solid white;
   border-radius: 10px;
   margin: 10px 0px;
+  
 
 }
 
@@ -155,8 +156,8 @@ embed {
 .brutal:hover {
   background-image: url("https://media3.giphy.com/media/wD0ZFCQ4KysKs/200.webp?cid=790b7611f6c90134220d123add194d1a274561195d1e8e65&rid=200.webp");
   /* transition-duration: 1s; */
-  border-radius: 50%;
-  background-size: contain;
+  /* border-radius: 50%; */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   
@@ -165,4 +166,34 @@ embed {
 iframe {
   width: 600px;
   height: 450px;
+}
+
+.splat:hover {
+  background-image: url("https://media3.giphy.com/media/tFOo5iM77msYE/giphy.webp?cid=790b7611f13e5751c44ba454d7b60978e7114aaf8f066034&rid=giphy.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  margin: 10px;
+  
+}
+
+.tarman:hover {
+  background-image: url("https://media3.giphy.com/media/i4FJxsvpiywwg/giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+img:hover {
+  border: 10px solid hotpink;
+  transform: rotateZ(-5deg);
+  transition-duration: 1s;
 }
