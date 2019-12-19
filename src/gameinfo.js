@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link, Route } from "react-router-dom"
 import axios from "axios"
+import { thisExpression } from "@babel/types";
 
 
 
@@ -13,7 +14,8 @@ class GameInfo extends Component {
       description: "",
       platforms: [],
       apiData: false,
-      counter: 0
+      counter: 0,
+      counterTwo: 0
     }
 
   }
@@ -70,8 +72,14 @@ class GameInfo extends Component {
     this.setState({
       counter: this.state.counter += 1
     })
-}
-
+  }
+  
+  gameVoteBad = (e) => {
+    this.setState({
+      counterTwo: this.state.counterTwo += 1
+    
+    })
+  }
 
 
 
@@ -81,8 +89,17 @@ class GameInfo extends Component {
     return (
       <div>
         <h1>{this.state.title}</h1>
+        <div className="vote">
         <h1>{this.state.counter}</h1>
-        <button onClick={(e) => {this.gameVote()}} >Worth playing?</button>
+          
+          {this.state.counter === this.state.counterTwo ? <img src="https://media2.giphy.com/media/5dSVztOWsEYYIYEX3m/200.webp?cid=790b7611932decabf91d2d6b7e4eb8846b1115ffbf4c43a1&rid=200.webp"/> : this.state.counter > this.state.counterTwo ? <img src="https://media3.giphy.com/media/Q2LRWdJDq9xy8/giphy.gif" /> :   <img src="https://media3.giphy.com/media/pjlyOCFvD73qg/200.webp?cid=790b7611e8723ae26407171c50ddf81ef8a910415dee89db&rid=200.webp" /> }
+          
+          
+
+        <button onClick={(e) => { this.gameVote() }} >Worth playing?</button>
+        <h1>{this.state.counterTwo}</h1>
+          <button onClick={(e) => { this.gameVoteBad() }}>This shit is TRASH</button>
+          </div>
         <h2>Released Date : {this.state.release}</h2>
         <p>{this.state.description}</p>
         <p>Developed by :</p>

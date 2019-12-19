@@ -197,3 +197,11 @@ img:hover {
   transform: rotateZ(-5deg);
   transition-duration: 1s;
 }
+
+
+
+.vote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
