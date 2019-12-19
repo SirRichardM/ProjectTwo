@@ -54,7 +54,7 @@ h2{
   font-family: 'Creepster', cursive;
   color: white;
   text-shadow: 5px 5px black;
-  font-size: 35px;
+  font-size: 2.5vw;
   text-shadow: 4px 4px #9100F6;
   margin: 0;
 }
@@ -199,6 +199,7 @@ iframe {
   position: fixed;
   width: 100%;
   
+  
   background-color: black;
 
   
@@ -257,7 +258,7 @@ button{
 
 .desc {
   background: white;
-  margin: 5vw;
+  margin: 0 5vw;
   color: black;
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5vw;
@@ -301,12 +302,17 @@ button:hover {
   font-size: 4vw
 }
 
+.head {
+  color: white;
+}
+
 
 
 @media (max-width: 400px) {
   
     .vote {
       flex-direction: column;
+      font-size: 2vw;
     }
     .App {
       margin: 0;

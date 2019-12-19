@@ -108,7 +108,7 @@ class GameInfo extends Component {
           <button className="trash" onClick={(e) => { this.gameVoteBad() }}>This shit is TRASH</button>
         </div>
        
-        <h2>Released Date : {this.state.release}</h2>
+        {/* <h2>Released Date : {this.state.release}</h2> */}
         <div className="desc">
         <p>{this.state.description}</p>
           <p>Developed by :</p>
@@ -130,14 +130,16 @@ class GameInfo extends Component {
               </div>
           )
           : <h1>Loading...</h1>}
-              </div>
+        </div>
+        <h2>Released Date : {this.state.release}</h2>
         <h2>Made for the</h2>
 
         {this.state.apiData === true ?
+          
           this.state.platforms.map((plat, index) =>
 
             <div key={index}>
-              <p> {plat}</p>
+              <h2>{plat}</h2>
 
             </div>
           )
@@ -145,7 +147,8 @@ class GameInfo extends Component {
           : <h1>Loading...</h1>}
 
         <h2>Systems</h2>
-
+        <br></br>
+        <br></br>
 
 
       </div>
