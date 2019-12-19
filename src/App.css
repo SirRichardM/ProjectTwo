@@ -347,5 +347,8 @@ body {
   h3 {
     text-shadow: 2px 2px red;
   }
+  p {
+    font-size: 4vw;
+  }
 
 }
