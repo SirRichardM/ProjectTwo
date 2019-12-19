@@ -4,7 +4,7 @@ import { Link, Route } from "react-router-dom"
 
 
 
-const games = ["outlast", "system shock", "system shock 2", "outlast 2", "until dawn", "evil within", "amnesia dark", "alan wake", "condemned", "agony", "left 4 dead", "dead space", "dead space 2", "f.e.a.r", "bloodborne", "layers of fear", "splatterhouse", "splatterhouse 2", "imscared", "soma", "the last of us", "inside", "clock tower", "dusk", "hexen", "blood", "harvester"]
+const games = ["outlast", "system shock", "system shock 2", "outlast 2", "until dawn", "evil within", "amnesia dark", "alan wake", "condemned 2", "agony", "left 4 dead", "dead space", "dead space 2", "f.e.a.r", "bloodborne", "layers of fear", "splatterhouse", "splatterhouse 2", "imscared", "soma", "the last of us", "inside", "clock tower", "dusk", "hexen", "blood", "harvester", "blood 2"]
 
 
 class HorrorGames extends Component {

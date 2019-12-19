@@ -101,10 +101,12 @@ class Info extends Component {
         {this.state.movie.apiData === true ?
           <div className="stats">
             <h1 className="crew">{this.state.movie.title}</h1>
+                  
             <h2> "{this.state.movie.tagline}"</h2>
+            <br/>
             <iframe src={you + this.state.key} />
             {/* <embed src={this.state.movie.gifs} /> */}
-            <h2> "{this.state.movie.tagline}"</h2>
+            {/* <h2> "{this.state.movie.tagline}"</h2> */}
             <p className="moovs"> {this.state.movie.overview}</p>
             {/* <img src={this.state.movie.backdrop} /> */}
                 {/* <div className="row">
