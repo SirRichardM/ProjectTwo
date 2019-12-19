@@ -34,10 +34,17 @@ body {
 
 } 
 
+h3{
+  font-family: 'Nosifer', cursive;
+  color: white;
+  font-size: 10vw;
+  text-shadow: 5px 20px red;
+}
+
 h1{
   font-family: 'Nosifer', cursive;
   color: white;
-  font-size: 100px;
+  font-size: 7.5vw;
   text-shadow: 5px 20px red;
   
   
@@ -48,7 +55,7 @@ h2{
   color: white;
   text-shadow: 5px 5px black;
   font-size: 35px;
-  text-shadow: 3px 3px #03F869;
+  text-shadow: 4px 4px #9100F6;
   margin: 0;
 }
 
@@ -150,6 +157,7 @@ embed {
   background-size: cover;
   padding: 10px;
   color: white;
+  border-bottom: 2px solid white;
 
 }
 
@@ -171,8 +179,10 @@ embed {
 }
 
 iframe {
-  width: 600px;
-  height: 450px;
+  /* width: 600px;
+  height: 450px; */
+  height: 40vw;
+  width: 60vw
 }
 
 .splat:hover {
@@ -188,7 +198,9 @@ iframe {
   bottom: 0;
   position: fixed;
   width: 100%;
-  margin: 10px;
+  
+  background-color: black;
+
   
 }
 
@@ -200,7 +212,7 @@ iframe {
 }
 
 img:hover {
-  border: 10px solid hotpink;
+  border: 10px solid  #03F869;
   transform: rotateZ(-5deg);
   transition-duration: 1s;
 }
@@ -248,6 +260,61 @@ button{
   margin: 5vw;
   color: black;
   font-family: 'Press Start 2P', cursive;
-  font-size: 25px;
+  font-size: 1.5vw;
   padding: 10px;
+  border: 5px solid #9100F6;
+  border-radius: 10px;
+}
+
+.App {
+  margin: 0 2vw;
+  background-color: black;
+}
+
+/* body {
+ background-image: url("https://media2.giphy.com/media/TK4aDaZrcPvFKnn7cE/giphy.webp?cid=790b761119a7985acc8e3bcaf4b5b9b786d4f48b2f118550&rid=giphy.webp");
+ background-size: cover;
+} */
+
+button:hover {
+  transform: scale(1.2);
+  box-shadow: 3px 3px 3px greenyellow;
+  transition-duration: 1s;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.moovs{
+  font-family: 'Butcherman', cursive;
+  background-color: white;
+  font-size: 2vw;
+  border: 3px 
+}
+
+.crew {
+  /* background-image: url("https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2016/10/tales-from-the-crypt-comics.png?itok=fyUmNKk2");  */
+  background-size: cover;
+  font-size: 4vw
+}
+
+
+
+@media (max-width: 400px) {
+  
+    .vote {
+      flex-direction: column;
+    }
+    .App {
+      margin: 0;
+    }
+
+  .header
+  
+  p{
+    text-align: center;
+  }
 }

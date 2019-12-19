@@ -111,15 +111,16 @@ class GameInfo extends Component {
         <h2>Released Date : {this.state.release}</h2>
         <div className="desc">
         <p>{this.state.description}</p>
-        <p>Developed by :</p>
-          </div>
-        {this.state.apiData === true ?
+          <p>Developed by :</p>
+          {this.state.apiData === true ?
           this.state.developers.map((dev, index) =>
             <div key={index}>
               <p>{dev}</p>
             </div>
           ) : <h1>Loading..</h1>
         }
+          </div>
+        
           <div className="shotbox">
         {this.state.apiData === true ?
           this.state.screens.map((image, index) =>
