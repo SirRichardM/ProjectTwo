@@ -89,21 +89,29 @@ class GameInfo extends Component {
     return (
       <div>
         <h1>{this.state.title}</h1>
+
+        <h2>User Consensus on this title is </h2>
         <div className="vote">
-        <h1>{this.state.counter}</h1>
+        
           
-          {this.state.counter === this.state.counterTwo ? <img src="https://media2.giphy.com/media/5dSVztOWsEYYIYEX3m/200.webp?cid=790b7611932decabf91d2d6b7e4eb8846b1115ffbf4c43a1&rid=200.webp"/> : this.state.counter > this.state.counterTwo ? <img src="https://media3.giphy.com/media/Q2LRWdJDq9xy8/giphy.gif" /> :   <img src="https://media3.giphy.com/media/pjlyOCFvD73qg/200.webp?cid=790b7611e8723ae26407171c50ddf81ef8a910415dee89db&rid=200.webp" /> }
+          
           
           
 
-        <button onClick={(e) => { this.gameVote() }} >Worth playing?</button>
+          <button className="boomstick" onClick={(e) => { this.gameVote() }} > HELL YEAH!!! </button>
+          <h1>{this.state.counter}</h1>
+              <div className="smaller">
+            {this.state.counter === this.state.counterTwo ? <img src="https://media2.giphy.com/media/5dSVztOWsEYYIYEX3m/200.webp?cid=790b7611932decabf91d2d6b7e4eb8846b1115ffbf4c43a1&rid=200.webp" /> : this.state.counter > this.state.counterTwo ? <img src="https://media3.giphy.com/media/Q2LRWdJDq9xy8/giphy.gif" /> : <img src="https://media3.giphy.com/media/pjlyOCFvD73qg/200.webp?cid=790b7611e8723ae26407171c50ddf81ef8a910415dee89db&rid=200.webp" />}
+              </div>
+          
         <h1>{this.state.counterTwo}</h1>
-          <button onClick={(e) => { this.gameVoteBad() }}>This shit is TRASH</button>
-          </div>
+          <button className="trash" onClick={(e) => { this.gameVoteBad() }}>This shit is TRASH</button>
+        </div>
+       
         <h2>Released Date : {this.state.release}</h2>
         <p>{this.state.description}</p>
         <p>Developed by :</p>
-
+          
         {this.state.apiData === true ?
           this.state.developers.map((dev, index) =>
             <div key={index}>

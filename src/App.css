@@ -204,4 +204,34 @@ img:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 100vw;
+  align-items: center;
+  
+  
+}
+
+
+
+button{
+  cursor: pointer;
+  background-size: cover;
+  border-radius: 50%;
+  font-family: 'Nosifer', cursive;
+  font-size: 25px;
+  color: white;
+  text-shadow: 3px 3px red;
+  border: 3px solid white;
+  width: 10vw;
+  height: 20vh;
+  
+}
+
+.trash {
+  background-image: url("https://experiencelife.com/wp-content/uploads/2003/03/Talking-Trash-1280x720.jpg");
+  background-size: cover;
+}
+
+.boomstick {
+  background-image: url("https://i0.wp.com/substreammagazine.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-15-at-2.33.57-PM.jpg?fit=2546%2C1288&ssl=1");
+  background-size: cover;
 }
