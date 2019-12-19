@@ -109,9 +109,10 @@ class GameInfo extends Component {
         </div>
        
         <h2>Released Date : {this.state.release}</h2>
+        <div className="desc">
         <p>{this.state.description}</p>
         <p>Developed by :</p>
-          
+          </div>
         {this.state.apiData === true ?
           this.state.developers.map((dev, index) =>
             <div key={index}>

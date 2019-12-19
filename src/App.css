@@ -48,7 +48,7 @@ h2{
   color: white;
   text-shadow: 5px 5px black;
   font-size: 35px;
-  text-shadow: 10px 10px #03F869;
+  text-shadow: 3px 3px #03F869;
   margin: 0;
 }
 
@@ -96,7 +96,7 @@ img {
 }
 
 p {
-  color: white;
+  /* color: white; */
 }
 
 .stats {
@@ -141,16 +141,23 @@ embed {
   
 }
 
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background: white;
+  background-image: url("https://media2.giphy.com/media/TK4aDaZrcPvFKnn7cE/giphy.webp?cid=790b761119a7985acc8e3bcaf4b5b9b786d4f48b2f118550&rid=giphy.webp");
+  background-size: cover;
+  padding: 10px;
+  color: white;
+
 }
 
 .tar {
-  background-image: url("https://i.pinimg.com/originals/bd/5b/63/bd5b63fc9a9e31550e7ddfdd647a33a0.jpg");
-  background-size: contain;
+  background-image: url("https://cdn.cheapism.com/images/101415_creepy_graveyards_slide_0_.2e16d0ba.fill-1440x605.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 40px;
 }
 
 .brutal:hover {
@@ -234,4 +241,13 @@ button{
 .boomstick {
   background-image: url("https://i0.wp.com/substreammagazine.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-15-at-2.33.57-PM.jpg?fit=2546%2C1288&ssl=1");
   background-size: cover;
+}
+
+.desc {
+  background: white;
+  margin: 5vw;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  padding: 10px;
 }
