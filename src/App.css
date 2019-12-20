@@ -35,6 +35,7 @@ body {
   border: 5px solid white;
   text-decoration: none;
   background-size: cover;
+  box-shadow: 2vw 2vw 2vw #9100F6;
 
 } 
 
@@ -477,7 +478,7 @@ h4 {
 }
 
 .container:hover {
-  transform: rotateY(350deg);
-  transition-duration: 10s;
+  transform: scale(.9);
+  transition-duration: 5s;
   cursor: url("https://ih0.redbubble.net/image.69732917.8505/flat,550x550,075,f.u2.jpg")
 }
