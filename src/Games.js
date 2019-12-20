@@ -48,7 +48,7 @@ class Games extends Component {
     return (
       <div>
         <h1 className="brutal">From Cinema to Game and Vice Versa</h1>
-        <h2>Video games based on movies and movies based on video games are notoriously bad but you may be suprised by some of the titles on this here....</h2>
+        <h2>Video games based on movies and movies based on video games are notoriously bad but you may be suprised by some of the titles on here....</h2>
         <div className="classics"  >
         {this.state.games.map((game, index) =>
           <div key={index}>

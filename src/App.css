@@ -109,7 +109,7 @@ p {
 .stats {
   align-items: center;
   
-  margin: 20px 300px;
+  margin: 0 10vw;
   
 }
 
@@ -308,13 +308,13 @@ button:hover {
   /* background-color: white;
   font-size: 2vw;
   border: 3px solid  #9100F6; */
-  padding: 10px;
+  
   border: 5px solid #9100F6;
   border-radius: 10px;
   background-image: url("https://media2.giphy.com/media/hXNuoNQ0QQXjUaiWh3/200.webp?cid=790b761119a7985acc8e3bcaf4b5b9b786d4f48b2f118550&rid=200.webp?");
   background-size: cover;
   color: white;
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 .crew {
