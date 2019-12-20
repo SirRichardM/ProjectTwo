@@ -305,9 +305,16 @@ button:hover {
 
 .moovs{
   font-family: 'Butcherman', cursive;
-  background-color: white;
+  /* background-color: white;
   font-size: 2vw;
-  border: 3px 
+  border: 3px solid  #9100F6; */
+  padding: 10px;
+  border: 5px solid #9100F6;
+  border-radius: 10px;
+  background-image: url("https://media2.giphy.com/media/hXNuoNQ0QQXjUaiWh3/200.webp?cid=790b761119a7985acc8e3bcaf4b5b9b786d4f48b2f118550&rid=200.webp?");
+  background-size: cover;
+  color: white;
+  font-size: 2vw;
 }
 
 .crew {
@@ -335,6 +342,12 @@ body {
 
 .desc:hover {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCdceX8IAwqe0kAwwgAK2eQXp8DQUD4145C2IpoZFcOB7lxOM&s");
+  text-shadow: .2vw .2vw black;
+}
+
+.moovs:hover {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCdceX8IAwqe0kAwwgAK2eQXp8DQUD4145C2IpoZFcOB7lxOM&s");
+  text-shadow: .2vw .2vw black;
 }
 
 
@@ -376,9 +389,64 @@ body {
     font-size: 4vw;
   }
 
+  .media {
+    width: 40vw;
+    /* margin: 3vh; */
+  }
+
 }
 
 h3:hover {
   text-shadow: 50px 500px 250px red;
   transition-duration: 10s;
+}
+
+h1:hover {
+  text-shadow: 50px 500px 250px red;
+  transition-duration: 10s;
+}
+
+@media (max-width: 800px) {
+  
+  .vote {
+    flex-direction: row;
+    font-size: 2vw;
+  }
+  
+
+h1{
+  text-shadow: 2px 2px red;
+}
+
+p{
+  text-align: center;
+}
+
+h2 {
+  font-size: 7vw; 
+}
+
+button {
+  font-size: 2vw;
+  height: 10vh;
+  width: 40vw;
+  border-radius: 1px;
+  margin: 3vh;
+}
+
+img {
+  width: 350px;
+}
+h3 {
+  text-shadow: 2px 2px red;
+}
+p {
+  font-size: 4vw;
+}
+
+.media {
+  width: 40vw;
+  /* margin: 3vh; */
+}
+
 }

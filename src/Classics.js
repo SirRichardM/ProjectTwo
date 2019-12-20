@@ -13,6 +13,7 @@ const Classics = (props) => {
     <div>
       <div>
         <h1 className="tarman" >The Best of the Best</h1>
+        <h2>A curated list of some of the best horror around from the legitmentally scary to the campy gore classics...</h2>
        <div className="classics">
         {props.classi.map((film, index) =>
            <div key={index}>

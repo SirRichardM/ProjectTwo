@@ -105,19 +105,13 @@ class Info extends Component {
             <h2> "{this.state.movie.tagline}"</h2>
             <br/>
             <iframe src={you + this.state.key} />
-            {/* <embed src={this.state.movie.gifs} /> */}
-            {/* <h2> "{this.state.movie.tagline}"</h2> */}
+           
             <p className="moovs"> {this.state.movie.overview}</p>
-            {/* <img src={this.state.movie.backdrop} /> */}
-                {/* <div className="row">
-            <h2>Runtime: {this.state.movie.runtime} Mins</h2>
-            <h2>Released on: {this.state.movie.release}</h2>
-              <h2>Budget: $ {this.state.movie.budget}</h2>
-              </div> */}
+            
             <embed src={this.state.movie.gifs} />
           </div>
           : <h1>Loading..</h1>}
-        {/* <iframe src={you + this.state.key} /> */}
+        
         <div className="row">
             <h2>Runtime: {this.state.movie.runtime} Mins</h2>
             <h2>Released on: {this.state.movie.release}</h2>

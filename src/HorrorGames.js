@@ -47,6 +47,7 @@ class HorrorGames extends Component {
     return (
       <div>
         <h1 className="splat">Infamous Horror Games</h1>
+        <h2>Some good, some bad......all ugly</h2>
         <div className="classics"  >
         {this.state.games.map((game, index) =>
           <div key={index}>

@@ -63,6 +63,20 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
+
+        {/* <Link to="/classics"> 
+
+
+
+   <div className="brutal" className="container" >
+<div className="text-block">
+
+<h2>Horror Classics!</h2>
+
+            </div>
+            </div>
+
+</Link> */}
       
         <Route path="/Home" render={() => <Home />} />
         <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
