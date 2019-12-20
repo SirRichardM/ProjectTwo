@@ -23,14 +23,18 @@ body {
 } */
 
 .container {
+  display: flex;
  background-image: url("https://ih0.redbubble.net/image.850655622.6681/flat,750x1000,075,f.u1.jpg");
-  margin: 0px 420px;
-  height: 800px;
-  
+  margin: 5vw auto; 
+  height: 57vw;
+  width: 45vw;
+  justify-content: center;
   /* border: 10px solid #33007B; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   text-align: center;
   border: 5px solid white;
+  text-decoration: none;
+  background-size: cover;
 
 } 
 
@@ -434,6 +438,8 @@ button {
   margin: 3vh;
 }
 
+
+
 img {
   width: 350px;
 }
@@ -449,4 +455,29 @@ p {
   /* margin: 3vh; */
 }
 
+}
+
+h4 {
+  font-family: 'Bangers', cursive;
+  font-size: 6vw;
+  margin: 0;
+  color: white;
+  text-shadow: .5vw .5vw #03F869;
+  text-decoration:  none;
+}
+
+.goaway {
+  text-decoration: none;
+}
+
+.enterIf {
+  bottom: 0;
+  font-size: 3vw;
+  padding-top: 42vw;
+}
+
+.container:hover {
+  transform: rotateY(350deg);
+  transition-duration: 10s;
+  cursor: url("https://ih0.redbubble.net/image.69732917.8505/flat,550x550,075,f.u2.jpg")
 }

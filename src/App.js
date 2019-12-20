@@ -26,6 +26,7 @@ class App extends Component {
     this.state = {
       movie: [],
       extra: false,
+      enter: false
       
     }
   }
@@ -54,7 +55,18 @@ class App extends Component {
         
   }
 
-  
+ 
+  onClick = (e) => {
+    e.preventDefault();
+  }
+
+  welcome =(e) => {
+    this.setState({
+      enter: true
+    })
+    
+
+  }
 
 
 
@@ -62,50 +74,37 @@ class App extends Component {
     
     return (
       <div className="App" >
-        <Header />
+        {/* <Header /> */}
 
-        {/* <Link to="/classics"> 
-
-
-
-   <div className="brutal" className="container" >
-<div className="text-block">
-
-<h2>Horror Classics!</h2>
-
+        {this.state.enter === false ? <Link className="goaway" onClick={this.welcome} to="/classics">
+          <div className="brutal" className="container" >
+            <div className="text-block">
+              <h4>Horrorified!</h4>
+              <div>
+                <h4 className="enterIf">Click to Enter and Explore Terrifying Cinema Classics and Video Games</h4>
+                </div>
             </div>
-            </div>
-
-</Link> */}
-      
-        <Route path="/Home" render={() => <Home />} />
-        <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
-        <Route path="/games" render={() => <Games />} />
-        <Route path="/gameinfo/:id" render={(props) => <GameInfo {...props} />} />
-        <Route path="/HorrorGames" render={() => <HorrorGames />} />
-      <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie}/>} />
-
-        {/* <div className="brutal" className="container" >
-
-
-          <div className="text-block">
-
-            <h2>Horror Classics!</h2>
-          
-
-            
           </div>
-          
+        </Link> :
+          <div>
+            <div className="App" >
+        <Header />
+          <Route path="/Home" render={() => <Home />} />
+          <Route path="/classics" render={(props) => <Classics {...props} classi={this.state.movie} />} />
+          <Route path="/games" render={() => <Games />} />
+          <Route path="/gameinfo/:id" render={(props) => <GameInfo {...props} />} />
+          <Route path="/HorrorGames" render={() => <HorrorGames />} />
+          <Route path="/Info/:id" render={(props) => <Info {...props} id={this.state.movie} />} />
 
-
-
-          
-        </div> */}
-        <br></br>
-        <br></br>
-        <br></br>
-        <Footer/>
-      </div>
+       
+          <br></br>
+          <br></br>
+          <br></br>
+            <Footer /> 
+            </div>
+          </div>}
+      </div> 
+  
     );
   }
 }
